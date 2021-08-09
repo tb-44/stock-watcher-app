@@ -1,0 +1,59 @@
+// TODO - add styles for the stockQuoteCard
+@import '../variables';
+
+.stock-quote-card {
+  display: flex;
+  margin: 5px;
+  background: white;
+  min-height: 105px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    color: $dark-blue;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+.card-left {
+  width: 80px;
+
+  display:flex;
+  align-items: center;
+  position: relative;
+}
+
+.card-right {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.stock-symbol-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  line-height: .7em;
+  color: $charcoal;
+}
+
+.stock-price {
+  font-size: 1.3em;
+  color: $dark-blue;
+  margin-top: 5px;
+
+  span {
+    font-size: .7em;
+  }
+}
+
+.stock-recent-performance {
+  color: $charcoal;
+  font-size: .7em;
+
+  span {
+    margin-right: 5px;
+  }
+}
