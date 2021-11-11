@@ -16,7 +16,7 @@ you may use your favorite IDE, but we recommend ether PHPStorm or Visual Studio 
 -   to get started ensure that node version 14 or higher is installed on your computer. The instructions can be found [here](https://nodejs.org/en/)
 -   open a command window and navigate to the root directory of this project (the directory which contains the `package.json` file) and run `npm install`
 -   run `npm run build` to run webpack and create the dist folder
--   run `npm run start` in order to start a server and view the running application
+-   run `npm start` in order to start a server and view the running application
 -   if the application doesn't run at this point please contact us so we can fix it as soon as possible (this wouldn't be part of the test);
 
 ### Tasks
