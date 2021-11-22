@@ -50,12 +50,14 @@ link.
 
 ## What we look for:
 
+-   Prioritization and handling of the tasks given.
 -   Well-structured, semantic HTML.
 -   Organized, well-named, modern CSS.
 -   Organized JavaScript that’s easy to read.
 -   A responsive realization of the provided design.
 -   Handling of edge cases (e.g. What happens if the user attempts to add a
     stock symbol that doesn’t exist?).
+-   Sensible git commits, which help us follow your thinking.
 
 
 ## What you'll need:
