@@ -3,7 +3,7 @@ import template from './StockQuoteCard.html';
 import _ from 'underscore';
 import './stock-quote-card.scss';
 
-export const StockQuoteView = Marionette.View.extend({
+export const StockQuoteCard = Marionette.View.extend({
     tagName: 'section',
     className: 'stock-card',
     template: _.template(template),

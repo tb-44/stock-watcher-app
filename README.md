@@ -32,7 +32,7 @@ link.
     input by the user is not found, or we've exceeded the max number of requests
     allowed - please handle these responses and any other unexpected response
     gracefully.
-- [ ] Complete the `formatMoney` function in `./src/StockQuote/StockQuoteView.js`
+- [ ] Complete the `formatMoney` function in `./src/StockQuote/StockQuoteCard.js`
     to display a dollar-formatted value (e.g. `$90.10`).
 
 

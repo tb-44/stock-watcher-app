@@ -1,8 +1,7 @@
 import Marionette from 'backbone.marionette';
-import {StockQuoteView} from "./StockQuoteView";
+import { StockQuoteCard } from './StockQuoteCard';
 
 export const StockQuoteCollectionView = Marionette.CollectionView.extend({
-    childView: StockQuoteView,
-
-})
+    childView: StockQuoteCard,
+});
 
