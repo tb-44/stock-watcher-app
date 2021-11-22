@@ -8,15 +8,19 @@ const MainView = Marionette.View.extend({
     el: '#app',
 
     ui: {
+        stockSearchForm: '#stock-search',
         stockSearchInput: '#stock-search-input',
         stockSearchButton: '#stock-search-button'
     },
 
     events: {
+        'submit @ui.stockSearchForm': 'searchStock',
         'click @ui.stockSearchButton': 'searchStock',
     },
 
-    searchStock: function() {
+    searchStock: function(e) {
+        e.preventDefault();
+
         const symbol = this.ui.stockSearchInput.val();
 
         if (symbol.length < 1) {
