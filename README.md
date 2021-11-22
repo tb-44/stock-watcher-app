@@ -66,5 +66,5 @@ link.
 -   **Designs:** Available in the [design] folder.
 
 
-[nodejs.org](https://nodejs.org/en/)
+[nodejs.org]: https://nodejs.org/en/
 [design]: ./design
