@@ -1,36 +1,29 @@
-// TODO - add styles for the stockQuoteCard
+// @TODO - add styles for the stockQuoteCard
 @import '../variables';
 
-.stock-quote-card {
+.stock-card {
   display: flex;
   margin: 5px;
   background: white;
   min-height: 105px;
+}
+.stock-card-left {
+  width: 80px;
 
-  p {
-    margin-bottom: 0;
-  }
-
-  h3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.stock-card-right {
+  flex-grow: 1;
+  padding: 10px;
+}
+  .stock-title {
     font-size: 1.1em;
     color: $dark-blue;
     text-transform: uppercase;
     margin-bottom: 0;
   }
-}
-
-.card-left {
-  width: 80px;
-
-  display:flex;
-  align-items: center;
-  position: relative;
-}
-
-.card-right {
-  flex-grow: 1;
-  padding: 10px;
-}
 
 .stock-symbol-label {
   font-size: 0.8em;
@@ -43,17 +36,15 @@
   font-size: 1.3em;
   color: $dark-blue;
   margin-top: 5px;
-
-  span {
+}
+  .stock-price-change {
     font-size: .7em;
   }
-}
 
 .stock-recent-performance {
   color: $charcoal;
   font-size: .7em;
-
-  span {
+}
+  .stock-recent-performance-detail {
     margin-right: 5px;
   }
-}
