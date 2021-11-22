@@ -1,52 +1,53 @@
 @import '../variables';
 
 .stock-card {
-  display: flex;
-  margin: 5px;
-  background: white;
-  min-height: 105px;
+    display: flex;
+    margin: 5px;
+    background: white;
+    min-height: 105px;
 }
-.stock-card-left {
-  width: 80px;
+    .stock-card-left {
+        width: 80px;
 
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
 
-.stock-card-right {
-  flex-grow: 1;
-  padding: 10px;
-}
-  .stock-title {
+    .stock-card-right {
+        flex-grow: 1;
+        padding: 10px;
+    }
+
+.stock-title {
     font-size: 1.1em;
     color: $dark-blue;
     text-transform: uppercase;
     margin-bottom: 0;
-  }
+}
 
 .stock-symbol-label {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  line-height: .7em;
-  color: $charcoal;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    line-height: .7em;
+    color: $charcoal;
 }
 
 .stock-price {
-  font-size: 1.3em;
-  color: $dark-blue;
-  margin-top: 5px;
+    font-size: 1.3em;
+    color: $dark-blue;
+    margin-top: 5px;
 }
-  .stock-price-change {
-    font-size: .7em;
-  }
+    .stock-price-change {
+        font-size: .7em;
+    }
 
 .stock-recent-performance {
-  color: $charcoal;
-  font-size: .7em;
+    color: $charcoal;
+    font-size: .7em;
 }
-  .stock-recent-performance-detail {
-    margin-right: 5px;
-  }
+    .stock-recent-performance-detail {
+        margin-right: 5px;
+    }
 
 // @TODO - add styles for the stock graph
