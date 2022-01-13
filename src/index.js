@@ -1,9 +1,12 @@
 import MainView from './Main/MainView';
 import Marionette from 'backbone.marionette';
 import './style.scss';
-import {getGlobalQuoteBySymbol} from "./StockQuote/StockQuoteService";
-import {createFromGlobalQuote, StockQuoteCollection} from "./StockQuote/StockQuoteModel";
-import {StockQuoteCollectionView} from "./StockQuote/StockQuoteCollectionView";
+import { getGlobalQuoteBySymbol } from './StockQuote/StockQuoteService';
+import {
+    createFromGlobalQuote,
+    StockQuoteCollection,
+} from './StockQuote/StockQuoteModel';
+import { StockQuoteCollectionView } from './StockQuote/StockQuoteCollectionView';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -29,10 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         stockQuoteCollection.add(createFromGlobalQuote(globalQuote));
     }
 
-    mainView.on("stockSearch", function(e) {
+    mainView.on('stockSearch', function(e) {
         const searchSymbol = e.symbol;
+
+        // @TODO - use the StockQuoteService to handle the search and update the
+        //          stockQuoteCollection, and remove the `alert()` call.
         alert(searchSymbol);
-        // TODO - replace the alert with a call to ./StockQuote/StockQuoteService.getGlobalQuoteBySymbol and complete
-        //  the callback function by adding valid results to the stockQuoteCollection
-    })
-})
+    });
+});

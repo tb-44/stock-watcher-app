@@ -27,5 +27,5 @@ export const createFromGlobalQuote = (globalQuote, name) => {
         price: globalQuote["05. price"],
         change: globalQuote["09. change"],
         changePercent: globalQuote["10. change percent"],
-    })
-}
+    });
+};
