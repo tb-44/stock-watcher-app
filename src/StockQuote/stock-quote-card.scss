@@ -17,7 +17,6 @@
 .stock-card-right {
     flex-grow: 1;
     padding: 15px;
-    margin-left: 5px;
 }
 
 .stock-title {
@@ -161,12 +160,14 @@
 
 @media only screen and (max-width: 576px) {
     .stock-card {
-        // display: flex;
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         padding: 15px;
         min-height: auto;
         margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .stock-card-left {
@@ -178,12 +179,13 @@
         display: flex;
         flex-direction: row;
         padding: 0;
+        width: 100%;
     }
 
     .stock-info {
-        width: 100%;
-        // float: left;
-        // height: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
     }
 
     .stock-title {
@@ -215,7 +217,4 @@
     .stock-recent-performance {
         display: none;
     }
-
-    #test {
-        display: none;}
 }
