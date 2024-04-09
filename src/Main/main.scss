@@ -1,1 +1,40 @@
-// @TODO - add necessary styles to achieve the grid like view in the design.
+@import '../variables.scss';
+
+.page-header {
+    font-weight: 800;
+    margin-left: 15px;
+}
+
+.stock-quotes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; 
+}
+
+#stock-search-button {
+    background: $button-stock-blue;
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+}
+
+// tablet devices
+@media only screen and (min-width: 577px) and (max-width: 1024px) { 
+    .stock-quotes-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+// mobile devices
+@media only screen and (max-width: 576px) { 
+    .stock-quotes-container {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .stock-quotes-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

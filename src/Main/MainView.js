@@ -24,8 +24,8 @@ const MainView = Marionette.View.extend({
         const symbol = this.ui.stockSearchInput.val();
 
         if (symbol.length < 1) {
-            // @TODO - show the user a warning here
             console.warn('No input detected, aborting search');
+            alert('No input detected, please input stock symbol for search');
 
             return;
         }
