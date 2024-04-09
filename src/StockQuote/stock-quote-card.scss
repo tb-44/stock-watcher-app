@@ -161,7 +161,7 @@
 
 @media only screen and (max-width: 576px) {
     .stock-card {
-        display: flex;
+        // display: flex;
         flex-direction: column;
         align-items: stretch;
         padding: 15px;
@@ -181,9 +181,9 @@
     }
 
     .stock-info {
-        width: 50%;
-        float: left;
-        height: auto;
+        width: 100%;
+        // float: left;
+        // height: auto;
     }
 
     .stock-title {
@@ -215,4 +215,7 @@
     .stock-recent-performance {
         display: none;
     }
+
+    #test {
+        display: none;}
 }

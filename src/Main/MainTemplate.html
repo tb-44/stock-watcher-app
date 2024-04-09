@@ -3,25 +3,23 @@
         <h1 class="page-header mt-1 mb-4">Stock Watcher</h1>
     </div>
     <form id="stock-search">
-        <div class="row stock-search-container">
-            <div class="col-6 col-lg-4">
-                <div class="form-group">
-                    <input
-                        id="stock-search-input"
-                        type="text"
-                        placeholder="Enter Stock Symbol"
-                        class="form-control"
-                    />
-                </div>
+        <div class="stock-search-container">
+            <div class="form-group">
+                <input
+                    id="stock-search-input"
+                    type="text"
+                    placeholder="Enter Stock Symbol"
+                    class="form-control"
+                />
             </div>
-            <div class="col-6 col-lg-8">
+            <div>
                 <button id="stock-search-button" class="btn btn-primary">
                     ADD STOCK
                 </button>
             </div>
         </div>
     </form>
-    <div class="row stock-results-container d-flex">
-        <div id="stock-quotes" class="col stock-quotes-container"></div>
+    <div class="stock-results-container">
+        <div id="stock-quotes" class="stock-quotes-container"></div>
     </div>
 </div>
