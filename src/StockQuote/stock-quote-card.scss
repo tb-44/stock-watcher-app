@@ -1,53 +1,218 @@
-@import '../variables';
+@import "../variables";
 
 .stock-card {
     display: flex;
     margin: 5px;
-    background: white;
+    background: $white;
     min-height: 105px;
 }
-    .stock-card-left {
-        width: 80px;
 
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
+.stock-card-left {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-    .stock-card-right {
-        flex-grow: 1;
-        padding: 10px;
-    }
+.stock-card-right {
+    flex-grow: 1;
+    padding: 15px;
+    margin-left: 5px;
+}
 
 .stock-title {
     font-size: 1.1em;
     color: $dark-blue;
     text-transform: uppercase;
     margin-bottom: 0;
+    font-weight: 800;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .stock-symbol-label {
     font-size: 0.8em;
     text-transform: uppercase;
-    line-height: .7em;
-    color: $charcoal;
+    line-height: 0.7em;
+    color: $title-gray;
+    font-weight: 600;
+    margin-top: 5px;
 }
 
 .stock-price {
     font-size: 1.3em;
     color: $dark-blue;
     margin-top: 5px;
+    font-weight: 400;
 }
-    .stock-price-change {
-        font-size: .7em;
+
+.stock-price-change {
+    font-size: 0.7em;
+
+    &.positive {
+        color: $high-green;
+
+        .stock-arrow-up {
+            fill: $high-green;
+        }
+
+        .percent-up {
+            color: $positive-green;
+        }
     }
+
+    &.negative {
+        color: $negative-red;
+
+        .stock-arrow-down {
+            fill: $negative-red;
+        }
+
+        .percent-down {
+            color: $bright-red;
+        }
+    }
+
+    svg {
+        height: 0.7em;
+        width: 0.7em;
+        margin-bottom: 3px;
+    }
+}
 
 .stock-recent-performance {
-    color: $charcoal;
-    font-size: .7em;
+    color: $caption-gray;
+    font-size: 0.7em;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-    .stock-recent-performance-detail {
-        margin-right: 5px;
+
+.stock-recent-performance-detail {
+    margin-right: 5px;
+    margin-bottom: 0;
+
+    .money-type {
+        color: $type-gray;
+    }
+}
+
+.stock-graph {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &.positive {
+        background-image: linear-gradient(to bottom, $low-green, $high-green);
+
+        .stock-graph-range-bar {
+            background-image: linear-gradient(to bottom, $white, $bright-green);
+        }
     }
 
-// @TODO - add styles for the stock graph
+    &.negative {
+        background-image: linear-gradient(to bottom, $low-red, $high-red);
+
+        .stock-graph-range-bar {
+            background-image: linear-gradient(to bottom, $low-red, $white);
+        }
+    }
+}
+
+.stock-graph-range-bar {
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    border-radius: 1px;
+    z-index: 1;
+}
+
+.stock-graph-indicator {
+    position: absolute;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 0;
+    border-bottom: 10px solid white;
+    transform: translateX(-100%) translateY(-50%) rotate(90deg);
+    z-index: 2;
+}
+
+.stock-range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 20px;
+    padding: 8px;
+    font-size: 0.7em;
+}
+
+.stock-graph-high,
+.stock-graph-low {
+    color: $white;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 576px) {
+    .stock-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+        min-height: auto;
+        margin: 0;
+    }
+
+    .stock-card-left {
+        display: none;
+    }
+
+    .stock-card-right {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .stock-info {
+        width: 50%;
+        float: left;
+        height: auto;
+    }
+
+    .stock-title {
+        font-size: 1.1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .stock-symbol-label {
+        font-size: 1em;
+        margin-top: 8px;
+    }
+
+    .stock-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .stock-price-change {
+        flex-wrap: nowrap;
+        font-size: 0.8em;
+    }
+
+    .stock-recent-performance {
+        display: none;
+    }
+}

@@ -15,12 +15,26 @@ export const getGlobalQuoteBySymbol = (symbol) => {
     return getApiData(symbol);
 }
 
-const getApiData = (symbol) => {
-    let url = baseUrl
-    url.search = new URLSearchParams({function: 'GLOBAL_QUOTE', symbol, 'apikey': apiKey} ).toString();
+const getApiData = async (symbol) => {
+    let url = baseUrl;
+    url.search = new URLSearchParams({
+        function: "GLOBAL_QUOTE",
+        symbol,
+        apikey: apiKey,
+    }).toString();
 
-    return fetch(url.toString(), {method: 'GET'})
-        .then(response => response.json())
-        .then(x => x['Global Quote'] || {})
-        .catch(error => console.warn(error));
-}
+    try {
+        const response = await fetch(url.toString(), { method: "GET" });
+        const data = await response.json();
+
+        if (!data["Global Quote"]) {
+            throw new Error("No searched symbol data or API limit reached: " + symbol);
+        }
+
+        return data["Global Quote"];
+
+    } catch (error) {
+        console.warn("Error for Global Quote search: ", error.message);
+        throw new Error("Error for Global Quote search: ", error.message);
+    }
+};
